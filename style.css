@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --pcolor:#efefef;
+    --scolor:#e6ba38;
+    --text-color:#222222;
+    --font:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:var(--pcolor) ;
+    font-family:var(--font);
+    width: 100%;
+    overflow-x: hidden;
+   
+
+color: var(--text-color);
+
+}
+#aid{
+    position:sticky;
+    top: 0;
+    height: 54px;
+    overflow-y: hidden;
+    z-index: 22;
+}
+header{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--pcolor);
+    padding: 2%;
+    align-items: center;
+    position: relative;
+    transition: 0.25s;
+    
+
+}
+header>button{
+    display: none;
+}
+.nav{
+    margin-left:auto;
+    margin-right: auto;
+    
+    
+}
+.nav>.navlinks{
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin:0 20px;
+    font-family:var(--font) ;
+    font-size: larger;
+    font-weight: 300;
+    transition: 0.25s;
+
+}
+header>.logo{
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    animation: anime 1s ease-in-out;
+}
+header::before{
+    opacity: 0.5;
+    content: " ";
+    position: absolute;
+    width: 457px;
+    height: 457px; 
+    background-color: var(--scolor);
+    border-radius: 999px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    
+    
+    
+   
+}
+header::after{
+    opacity: 0.5;
+    content: " ";
+    position: absolute;
+    width: 457px;
+    height: 457px; 
+    background-color: var(--scolor);
+    border-radius: 999px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    transform: translate(-50%,10%);
+    z-index: -2;
+    
+}
+header:hover::before{
+    border: 10px solid var(--pcolor);
+    cursor: pointer;
+    box-shadow: 0px 0px 30px var(--scolor);
+    
+}
+header:hover::after{
+    box-shadow: 0px 0px 100px var(--scolor);
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.hero>details{
+    width: 20%;
+    
+}
+.hero>.h{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.t{
+    position: relative;
+}
+.t::after{
+position: absolute;
+content: " ";
+width: 100%;
+height: 100%;
+background-color: var(--text-color);
+top: 0;
+
+filter: blur(100px);
+
+}
+img{
+ position: relative;
+}
+img::after{
+    position: absolute;
+    background-color: var(--scolor);
+    
+}
+.navlinks:hover{
+    color: var(--scolor);
+    font-size: larger;
+}
+.navlinks{
+    position: relative;
+    overflow: hidden;
+    animation: uping 1s ease-in;
+}
+.navlinks::after{
+position: absolute;
+content: " ";
+width: 105%;
+height: 20%;
+background-color: var(--text-color);
+top: 120%;
+left: -5%;
+border-radius: 30px;
+filter:  blur(1px);
+opacity: 0;
+transition: 0.25s;
+
+
+}
+.navlinks:focus{
+    color: var(--scolor);
+}
+.navlinks:focus::after{
+    opacity: 1;
+}
+.navlinks:hover::after{
+   opacity: 1;
+}
+@keyframes anime {
+    from{transform: translate(-150px,0px);opacity: 0;}
+}
+@keyframes animee {
+    from{transform: translate(150px,0px);opacity: 0;}
+}
+details{
+    animation: anime 1s ease-in-out  ;
+}
+h1{
+    animation: animee 1s ease-in-out;
+}
+@keyframes uping {
+    from{opacity: 0;transform:translateY(-100px);}
+}
+img{
+    animation: t7t 1s ease-in-out;
+}
+@keyframes t7t {
+    from{opacity: 0;transform:translateY(100px);}
+}
+.about{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--scolor);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    
+    
+}
+
+.about>h1{
+    height: 60px;
+    margin-top: 60px;
+text-align: center;
+width: 30%;
+border-radius: 20px;
+background-color: beige;
+padding: 10px 0;
+
+
+}
+.about>p{
+    width: 80%;
+    margin-top: 3%;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+details{
+    cursor: pointer;
+    
+}
